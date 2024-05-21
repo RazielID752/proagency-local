@@ -1,0 +1,58 @@
+/* / Configuração global */
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #545454;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+
+
+:root {
+  --tamanho-maximo: 1280px;
+  --bg-color: #ffffff;
+  --bg-color-2: #000000;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-purple: #7A02D9;
+  --color-green: #4CAF4F;
+  --color-gray: #323232;
+  --color-line: #E8E8E8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-color);
+  font-family: "Inter", arial;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* // Configuração global */

@@ -1,0 +1,142 @@
+.Header {
+    z-index: 3;
+    background-color: #fff;
+    border-bottom: 2px solid var(--color-line) ;
+  }
+  
+  .headerWrapper {
+    max-width: var(--tamanho-maximo);
+    margin: 0 auto;
+    padding: 16px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .ulWrapper {
+    display: flex;
+    gap: 24px;
+  }
+  
+  .navLi .linksMenuLi {
+    padding: 0.5rem;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-black);
+    position: relative;
+  }
+
+  .navLi .linksMenuLi::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: var(--color-green);
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: all 0.6s ease;
+  }
+
+  .navLi .linksMenuLi:hover::before{
+    transform: scaleX(0.8);
+  }
+  
+  .ulWrapper .navLi .linksMenuLi:hover {
+    color: var(--color-green);
+  }
+  
+  .navMenu .ulWrapper .navLi{
+    position: relative;
+  }
+  
+  .containerBtnMenu{
+    display: flex;
+    gap: 8px;
+  }
+
+  .containerBtnMenu .loginButton {
+    background-color: var(--color-red);
+    padding: 8px 14px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-green);
+    border-radius: 10px;
+  }
+
+  .containerBtnMenu .loginButton:hover {
+    color: var(--color-green);
+    text-decoration: 2px underline var(--color-green);
+    transition: all 0.2s ease;
+  }
+
+  .containerBtnMenu .registerButton {
+    background-color: var(--color-green);
+    padding: 8px 14px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-white);
+    border-radius: 5px;
+    border: 2px solid var(--color-green);
+  }
+  
+  .containerBtnMenu .registerButton:hover {
+    color: var(--color-green);
+    background: var(--color-white);
+    border: 2px solid var(--color-green);
+  }
+  #buttonMobile {
+    display: none;
+  }
+  
+  @media (max-width: 600px) {
+    /* / Menu mobile */
+    .headerWrapper {
+      max-width: 450px;
+    }
+
+    .navMenu {
+      display: none;
+    }
+  
+    #menuIcons {
+      width: 20px;
+      height: 20px;
+    }
+  
+    #buttonMobile {
+      display: block;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: none;
+      cursor: pointer;
+      height: 28px;
+      width: 28px;
+    }
+  
+    .active .navMenu {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      right: 0;
+      top: 60px;
+      width: 100%;
+      background-color: #ffffff;
+      z-index: 1;
+    }
+  
+    .ulWrappe .navLi {
+      padding: 1rem;
+    }
+    .active .ulWrapper {
+      text-align: center;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0 1rem;
+    }
+    /* // Menu mobile */
+  }
+  
